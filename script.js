@@ -58,6 +58,35 @@ var lowerCase = [
   "y",
   "z",
 ];
+
+var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+var specialChar = [
+  " ",
+  "!",
+  '"',
+  "#",
+  "$",
+  "%",
+  "&",
+  "'",
+  "(",
+  ")",
+  "*",
+  "+",
+  ",",
+  "-",
+  ".",
+  "/",
+  ":",
+  ";",
+  "<",
+  "=",
+  ">",
+  "?",
+  "@",
+];
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -80,4 +109,20 @@ function generatePassword() {
   if (!userChoice) {
     return;
   }
+
+  // Get random index from array of upperCase
+  var index1 = Math.floor(Math.random() * upperCase.length);
+  var upperChoice = options[index1];
+
+  // Get random index from array of lowerCase
+  var index2 = Math.floor(Math.random() * options.length);
+  var computerChoice = options[index2];
+
+  // Get random index from array of numbers
+  var index3 = Math.floor(Math.random() * options.length);
+  var computerChoice = options[index3];
+
+  // Get random index from array of special characters
+  var index4 = Math.floor(Math.random() * options.length);
+  var computerChoice = options[index4];
 }
